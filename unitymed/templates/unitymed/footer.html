@@ -1,0 +1,66 @@
+
+<br>
+<hr>
+<div class="row">
+    <div class="col-sm-4 text-center fs-5">
+        <h3>Our Services</h3>
+      <ul class="list-unstyled">
+        {% for service in services %}
+        <li><a style="color:#0000A3" class="text-decoration-none" onMouseOver="this.style.color='#000000'"
+            onMouseOut="this.style.color='#0000A3'" href="{% url 'service-detail' service.slug %}">{{service.title}}</a></li>
+        {% endfor %}
+     </ul>
+    </div>
+
+    <div class="col-sm-4 text-center">
+        <h3>About Us</h3>
+        <p>Unity Medical Centre is a clinic located in Kiunguro, Ruiru along Thika road.
+            It offers medical facilities for outpatient. Services include <strong>general consultation, 
+            medical checkup, minor surgical.</strong> 
+         </p>
+         <p>
+            We are equiped with quality facilities and equipments.
+            We have dedicated professionals to serve you at our medical centre. Do not hesitate to 
+            <a style="color:#0000A3" class="text-decoration-none" onMouseOver="this.style.color='#000000'"
+            onMouseOut="this.style.color='#0000A3'" href="{% url 'contact' %}">contact us</a>
+            for any enquiries.
+        </p>
+    </div>
+
+    <div class="col-sm-4 text-center fs-5">
+        <h3>Support</h3>
+        <ul class="list-unstyled">
+          <li><a style="color:#0000A3" class="text-decoration-none" onMouseOver="this.style.color='#000000'"
+              onMouseOut="this.style.color='#0000A3'" href="{% url 'pharmacy' %}">Pharmacy</a></li>
+       </ul>
+       <ul class="list-unstyled">
+        <li><a style="color:#0000A3" class="text-decoration-none" onMouseOver="this.style.color='#000000'"
+            onMouseOut="this.style.color='#0000A3'" href="{% url 'services' %}">Services</a></li>
+     </ul>
+     <ul class="list-unstyled">
+        <li><a style="color:#0000A3" class="text-decoration-none" onMouseOver="this.style.color='#000000'"
+            onMouseOut="this.style.color='#0000A3'" href="{% url 'contact' %}">Contact Us</a></li>
+     </ul>
+     <ul class="list-unstyled">
+        <li><a style="color:#0000A3" class="text-decoration-none" onMouseOver="this.style.color='#000000'"
+            onMouseOut="this.style.color='#0000A3'" href="{% url 'about' %}">About Us</a></li>
+     </ul>
+    </div>
+
+</div>
+
+<div class="container">
+
+    <div class="copyright text-center">
+        <i><a class="text-decoration-none" style="color:black;" href="https://facebook.com/japheth.jackson.7"><img src="/media/media/facebook.jpg" class="rounded" style="vertical-align: middle;" height="40" alt=""/></a></i>&nbsp;&nbsp;
+        <i><a class="text-decoration-none" style="color:black;" href="https://twitter.com/odongo_ogutu"><img src="/media/media/twiitter.png" class="rounded" style="vertical-align: middle;" height="40" alt=""/></a></i>&nbsp;&nbsp;
+        <i><a class="text-decoration-none" style="color:black;" href="https://instagram.com/jacksonjapheth"><img src="/media/media/instagram.jpg" class="rounded" style="vertical-align: middle;" height="40" alt=""/></a></i>&nbsp;&nbsp;
+        <i><a class="text-decoration-none" style="color:black;" href="https://api.whatsapp.com/send?phone=254720802891"><img src="/media/media/whatsapp.png" class="rounded" style="vertical-align: middle;" height="40" alt=""/> </a></i>&nbsp;&nbsp;
+        <i><a class="text-decoration-none" style="color:black;" href="mailto:unitymed2022@gmail.com"><img src="/media/media/email.png" class="rounded" style="vertical-align: middle;" height="40" alt=""/></a></i>
+    </div>
+    <br>
+    <div class="copyright text-center fs-5">
+      &copy; Copyright 2022 <strong><span>unity medical clinic</span></strong>. All Rights Reserved
+    </div>
+    <br>
+  </div>

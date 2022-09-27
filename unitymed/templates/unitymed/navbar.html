@@ -1,0 +1,54 @@
+
+<div>
+  <div class="row fs-5 p-2">
+    <div class="col-sm-3"><i><img src="/media/media/logo.png" class="rounded" style="vertical-align: middle;" height="20" alt="UMC"/>&nbsp;&nbsp;UNITY MEDICAL CENTRE</i></div>
+    <div class="col-sm-3"><i><img src="/media/media/whatsapp.png" class="rounded" style="vertical-align: middle;" height="20" alt=""/>&nbsp;&nbsp;<a class="text-decoration-none" style="color:black;" href="https://api.whatsapp.com/send?phone=254720802891">+254 720802891</a></i></div>
+    <div class="col-sm-3"><i><img src="/media/media/email.png" height="15" alt=""/> <a class="text-decoration-none" style="color:black;" href="mailto:unitymed2022@gmail.com">&nbsp;&nbsp;unitymed2022@gmail.com</a></i></div>
+    <div class="col-sm-3 text-center">
+      <i><a class="text-decoration-none" style="color:black;" href="https://facebook.com/japheth.jackson.7"><img src="/media/media/facebook.jpg" class="rounded" style="vertical-align: middle;" height="20" alt=""/></a></i>&nbsp;&nbsp;
+      <i><a class="text-decoration-none" style="color:black;" href="https://twitter.com/odongo_ogutu"><img src="/media/media/twiitter.png" class="rounded" style="vertical-align: middle;" height="20" alt=""/></a></i>&nbsp;&nbsp;
+      <i><a class="text-decoration-none" style="color:black;" href="https://instagram.com/jacksonjapheth"><img src="/media/media/instagram.jpg" class="rounded" style="vertical-align: middle;" height="20" alt=""/></a></i>&nbsp;&nbsp;
+    </div>
+  
+  </div>
+</div>
+
+<div class="p-1 text-center bg-light">
+  <a class="text-decoration-none" style="color:black;" href="https://www.google.com/maps/search/kihunguro+mosque/@-0.950826,36.9906924,69318m/data=!3m2!1e3!4b1"><i><img src="/media/media/map.png" class="rounded" style="vertical-align: middle;" height="20" alt="map"/>&nbsp;&nbsp;Located at THIKA SUPER HIGHWAY RUIRU, Next to Kihunguro Mosque</i></a> 
+</div>
+
+
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color:blue">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" style="color:white" href="{% url 'index' %}">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" style="color:white" href="{% url 'services' %}">Our Services</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" style="color:white" href="{% url 'pharmacy' %}" tabindex="-1" aria-disabled="true">Pharmacy</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="color:white" href="{% url 'about' %}">About Us</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" style="color:white" href="{% url 'contact' %}">Contact Us</a>
+          </li>
+        </ul>
+        
+        <form class="d-flex" method="GET" action="{% url 'search' %}">
+          {% csrf_token %}
+          <input class="form-control me-2" type="search" name="q" placeholder="Search..." aria-label="Search">
+          <button class="btn btn-outline-success" style="color:white" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
