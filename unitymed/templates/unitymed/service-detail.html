@@ -15,7 +15,7 @@
 {% include 'unitymed/navbar.html' %}
 
 
-<div class="row bg-light">
+<div class="row bg-light fs-5">
 
     <h1 class="text-center">{{ service_item.title }}</h1>
 
@@ -27,7 +27,7 @@
     <div class="col-sm-8 fs-5 p-3">
         <div>{{ service_item.body | safe }}</div>
 
-        <div class="text-center"><a style="color:#0000A3" class="text-decoration-none" onMouseOver="this.style.color='#000000'"
+        <div class="text-center"><a style="color:#0000A3" class="text-decoration-none btn btn-warning" onMouseOver="this.style.color='#000000'"
             onMouseOut="this.style.color='#0000A3'" href="{% url 'contact' %}">CONTACT US</a></div>
     </div>
 </div>

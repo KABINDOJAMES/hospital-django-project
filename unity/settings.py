@@ -13,9 +13,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-%h+*gcxgj1hqql23zu%irb+-6w2-9ht83!-fb45^%70*iwm@wc'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['unitymedicalhospital.herokuapp.com', ]
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -116,10 +116,10 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_URL = 'media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-""" STATICFILES_DIRS = [
+STATICFILES_DIRS = [
     BASE_DIR / "staticfiles/"
 ]
-"""
+
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
 # Default primary key field type
@@ -127,4 +127,4 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-#django_heroku.settings(locals())  # for database provisioning
+#django_heroku.settings(locals())  # for database provisioning in heroku

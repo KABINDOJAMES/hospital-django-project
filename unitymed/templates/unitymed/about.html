@@ -9,39 +9,14 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
-<body style="background-color: rgb(194, 198, 202);">
+<body>
 {% include 'unitymed/navbar.html' %}
 </div >
-<div class="text-black text-center fs-5" >
-<h1 class="text-center" style="color:black;size:15px;">Unity medical Centre </h1>
-<p>Unity Medical Center is a clinic located in Kiunguro Ruiru along Thika road.The clinic have a dedicated focus on the provision of quality and unmatched healthcare services to the residents of Ruiru and its environs. We provide a range of medical and minor surgical services to the local Ruiru community as well as the neighbouring community's patients.
-The clinic offers 24 hours service to its customers in order to cater for the all the emergenicies that could arise at any time of the day. Along with the survices offerd at Unity Medical Center include; Outpatiennt services, General consultation, BP monitor, Diabetes clinic, Antenatal clinic, Minor surgeries,Circumcision,Gaenacological services,Dispensing, Pharmacy and Labaratory Services </p>
-</div>
-<div class="">
-<div class="text-black text-center fs-5">
-<h2 class="text-center"style="color:black;size:15px;">Quality Health Care</h2>
-<p>We approach the patient with respect, thus increasing the prestige of our hospital. We are aware in every situation that we serve the client. We are professionals providing quality health care services in all fields. We provide fast, low-burden diagnostic and treatment services for our patients, utilizing unique methods and techniques.</p>
-</div>
-</div>
-<div class="row ">
-    
-    <div class="col-sm-4  text-center text-black fs-5">
-        <h3>Our Mission</h3>
-        <p>To be regionally respected for excellence in patient care and most trusted for personalized medical treatment.</p>
-    </div>
-       
-    <div class="col-sm-4 text-center text-black fs-5">
-        <h3>Our Values</h3>
-        <p>To support and improve the healing and the general health of the people and communities we serve.</p>
-    </div>
-        
-    <div class="col-sm-4 text-center text-black fs-5">
-        <h3>Our Vision</h3>
-        <p>To achieve the best for our patients, their families, our staff and our communities. To put our patients first by working as one team; leading and listening; and striving for the best. Together, we make the difference.</p>
-    </div>
-    
-</div>
-<div>
+
+<h1 class="text-center" style="color:black;size:15px;">{{ aboutus.title }}</h1>
+
+ {{ aboutus.body | safe }}
+
 {% include 'unitymed/footer.html' %}
 </body>
 </html>

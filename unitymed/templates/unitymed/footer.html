@@ -51,16 +51,21 @@
 
 <div class="container">
 
-    <div class="copyright text-center">
-        <i><a class="text-decoration-none" style="color:black;" href="https://facebook.com/japheth.jackson.7"><img src="/media/media/facebook.jpg" class="rounded" style="vertical-align: middle;" height="40" alt=""/></a></i>&nbsp;&nbsp;
-        <i><a class="text-decoration-none" style="color:black;" href="https://twitter.com/odongo_ogutu"><img src="/media/media/twiitter.png" class="rounded" style="vertical-align: middle;" height="40" alt=""/></a></i>&nbsp;&nbsp;
-        <i><a class="text-decoration-none" style="color:black;" href="https://instagram.com/jacksonjapheth"><img src="/media/media/instagram.jpg" class="rounded" style="vertical-align: middle;" height="40" alt=""/></a></i>&nbsp;&nbsp;
-        <i><a class="text-decoration-none" style="color:black;" href="https://api.whatsapp.com/send?phone=254720802891"><img src="/media/media/whatsapp.png" class="rounded" style="vertical-align: middle;" height="40" alt=""/> </a></i>&nbsp;&nbsp;
-        <i><a class="text-decoration-none" style="color:black;" href="mailto:unitymed2022@gmail.com"><img src="/media/media/email.png" class="rounded" style="vertical-align: middle;" height="40" alt=""/></a></i>
-    </div>
+   <div class="text-center">
+     {% for item in media_links %}
+     <i><a class="text-decoration-none" target="_blank" style="color:black;" href="{{ item.link }}">
+     {% if item.image %}
+        <img src="{{item.image.url}}" class="rounded" style="vertical-align: middle;" height="40" alt="{{item.alt}}"/>
+     {% else %}
+        <img src="{{item.image_url}}" class="rounded" style="vertical-align: middle;" height="40" alt="{{item.alt}}"/>
+     {% endif %}
+    </a></i>&nbsp;&nbsp;
+     {% endfor %}
+   </div>
+
     <br>
     <div class="copyright text-center fs-5">
-      &copy; Copyright 2022 <strong><span>unity medical clinic</span></strong>. All Rights Reserved
+      &copy; Copyright 2023 <strong><span>unity medical clinic</span></strong>. All Rights Reserved
     </div>
     <br>
   </div>

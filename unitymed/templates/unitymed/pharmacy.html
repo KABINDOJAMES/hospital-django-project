@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unity Medical Centre</title>
+    <title>{{ pharmacy.title }}</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
@@ -12,38 +12,31 @@
 <body>
 {% include 'unitymed/navbar.html' %}
 
-
+<div class="container">
 <div class="row bg-light">
 
-    <h1 class="text-center">PHARMACY</h1>
-
+    <h1 class="text-center">{{ pharmacy.title }}</h1>
+    
+    {% if pharmacy.image %}
     <div class="col-sm-4 p-3">
-        <img class="card-img-top  rounded" src="/media/media/pharmacy.jpeg" alt="img">
-        
+        <img class="card-img-top  rounded" src="{{ pharmacy.image.url }}" alt="pharmacy">   
     </div>
- 
-    <div class="col-sm-8 fs-5 p-3">
-        <div>
-           <p> Working with other disciplines, Unity Health Centre clinic's team pharmacists play an essential role in service delivery.
-            We provide the right medicine to the right patient at the right time and ensure you get the best out of your medicines.
-        </p>
-        <p>If you have any questions about your medicines, please feel free to inform any member of the clinic to connect you with our able pharmacists.
-            Don't be shy to contact us through calls or any of our social platforms
-        </p>
-        <div class="row text-center fs-5 color:">
-           <h1>Our Services</h1>
-           <p>Prescription and Verification</p>
-           <p>Dispensing</p>
-           <p>Medical Counseling and Patient Referrals</p>
-           <p>Over the Counter Product</p>
-           <p>Recommendation</p>
-           <p>Pharmacautical Care</p>
-        </div>
-        </div>
+    {% else %}
+    <div class="col-sm-4 p-3">
+        <img class="card-img-top  rounded" src="{{ pharmacy.image_url }}" alt="pharmacy">   
+    </div>
+    {% endif %}
 
+    <div class="col-sm-8 fs-5 p-3">
+        {{ pharmacy.body | safe }}
+
+
+        <br>
         <div class="text-center"><a style="color:#0000A3" class="text-decoration-none" onMouseOver="this.style.color='#000000'"
             onMouseOut="this.style.color='#0000A3'" href="{% url 'contact' %}">CONTACT US</a></div>
     </div>
+</div>
+
 </div>
 
 {% include 'unitymed/footer.html' %}
