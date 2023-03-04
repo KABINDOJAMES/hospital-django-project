@@ -70,12 +70,15 @@ virtualenv my_env
    python manage.py runserver
    ```
    ### You Are Good To Go
+   
    You can login to the admin panel and make changes to the text displayed on the web page, you can edit the following:
    - [x] Your homepage text and images
    - [x] You can edit and add new services
    - [x] Social Media Links
    - [x] About Section and Contact us
    - [x] Pharmacy section
+   ![admin](https://user-images.githubusercontent.com/90185274/222882303-9cdcc6c4-93b8-4e4a-9bb2-b3af683a6d1d.PNG)
+
    
    If Any Errors, Please leave a comment
    > # The project is sponsored by https://www.dogojanja.com
