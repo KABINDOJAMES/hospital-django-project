@@ -49,7 +49,7 @@ virtualenv my_env
  - Change directory to your cloned repository
  - Install requirements by running
  ```
- pip install requirements.txt
+ pip install -r requirements.txt
  ```
  - Make Database Migrations
   ```
